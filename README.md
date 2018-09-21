@@ -6,16 +6,20 @@ https://github.com/holgerbrandl/kscript/issues/166
 
 run the test pack with
 ```bash
-./gradew run --args "quickbuild -- pack sk"
+./gradew run --args "quickbuild - pack sk"
 ```
 
 or 
 
 ```bash
-kscript src/TestPack.kt quickbuild
+kscript src/TestPack.kt quickbuild - pack sk
 ```
-using `--` to separate jobs will nt work there.. forgot shells do this too
-will need to replace that with a different separator
 
 get kscript here: https://github.com/holgerbrandl/kscript  
 or here: https://aur.archlinux.org/packages/kscript/
+
+
+## Intellij IDEA
+
+open `build.gradle.kts` in idea
+or execute `idea` in the root folder
