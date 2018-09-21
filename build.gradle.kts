@@ -37,28 +37,36 @@ allprojects {
         maven { setUrl("https://dl.bintray.com/kotlin/ktor") }
         maven { setUrl("https://kotlin.bintray.com/kotlinx") }
     }
-
-    kotlin.sourceSets.maybeCreate("main").kotlin.srcDir("src")
 }
 
+
+val gen_src = project("gen").file("src").apply {
+    mkdirs()
+}
+val gen = project("gen") {
+    dependencies {
+        //    compile(group = "moe.nikky.voodoo-rewrite", name = "dsl", version = "0.4.0+")
+        compile(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.0")
+        compile(group = "com.github.holgerbrandl", name = "kscript-annotations", version = "1.+")
+    }
+
+    kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(gen_src.path)
+    idea {
+        module {
+            generatedSourceDirs.add(gen_src)
+        }
+    }
+}
 
 dependencies {
-    compile(project("gen"))
+    compile(gen)
 }
-
-//val runDir = rootProject.file("run")
-//runDir.mkdirs()
-//val run by tasks.getting(JavaExec::class) {
-//    workingDir = runDir
-//}
 
 application {
     mainClassName = "TestPackKt"
 }
 
-val gen_src = rootProject.file("gen").resolve("gen-src").apply {
-    mkdirs()
-}
+kotlin.sourceSets.maybeCreate("main").kotlin.srcDir("packs")
 
 val generateCurseData = project("gen").task<JavaExec>("generateCurseData") {
     main = "voodoo.CursePoetKt"
