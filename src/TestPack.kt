@@ -1,9 +1,12 @@
 #!/usr/bin/env kscript
-@file:DependsOnMaven("moe.nikky.voodoo-rewrite:dsl:0.4.0-121")
+@file:DependsOnMaven("moe.nikky.voodoo-rewrite:dsl:0.4.0-138")
 @file:DependsOnMaven("ch.qos.logback:logback-classic:1.3.0-alpha4") //seems that i need a explicit dependency on this.. yet another bugreport
 @file:MavenRepository("kotlinx","https://kotlin.bintray.com/kotlinx" )
-@file:MavenRepository("ktor","https://dl.bintray.com/kotlin/ktor" )
-@file:MavenRepository("elytra","https://repo.elytradev.com" )
+@file:MavenRepository("ktor", "https://dl.bintray.com/kotlin/ktor" )
+@file:MavenRepository("elytradev", "https://repo.elytradev.com" )
+@file:Include("../gen/gen-src/Mod.kt")
+@file:Include("../gen/gen-src/TexturePack.kt")
+//COMPILER_OPTS -jvm-target 1.8
 
 import voodoo.*
 import voodoo.data.*
@@ -29,22 +32,22 @@ fun main(args: Array<String>) {
 
                 //TODO: use type URL ?
                 metaUrl = "https://curse.nikky.moe/api"
-                entriesBlock {
-                    id("botania") optionals false
+                list {
+                    id(Mod::botania) optionals false
 
-                    id("rftools") {
+                    id(Mod::rftools) {
                         optionals = false
                     }
 
-                    entry(JenkinsProvider) {
+                    withProvider(JenkinsProvider) {
                         jenkinsUrl = "https://ci.elytradev.com"
                         side = Side.SERVER
-                    }.entriesBlock {
+                    }.list {
                         id("matterlink") job "elytra/MatterLink/master"
                         id("elytra/BTFU/multi-version")
                     }
 
-                    id("tails")
+                    id(Mod::tails)
                 }
             }
         )
