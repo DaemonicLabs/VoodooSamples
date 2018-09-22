@@ -6,3 +6,8 @@ out/
 run/
 kotlinc/
 gen/src/
+
+# TODO: set up gitignore automatically from voodoo
+workspace/
+*.entry.hjson
+*.lock.hjson

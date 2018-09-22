@@ -63,7 +63,8 @@ dependencies {
 }
 
 application {
-    mainClassName = "TestPackKt"
+//    mainClassName = "TestPackKt"
+    mainClassName = "PokemansKt"
 }
 
 kotlin.sourceSets.maybeCreate("main").kotlin.srcDir("packs")
