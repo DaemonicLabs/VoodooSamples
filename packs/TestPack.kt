@@ -16,9 +16,9 @@ import voodoo.provider.*
 import java.io.File
 
 fun main(args: Array<String>) {
-    withDefaultMain(arguments = args) {
+    withDefaultMain(root = File("testpack"), arguments = args) {
         NestedPack(
-            id = "some-silly-pack",
+            id = "testpack",
             version = "1.0",
             mcVersion = "1.12.2",
             //TODO: type = File

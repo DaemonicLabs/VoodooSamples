@@ -20,7 +20,7 @@ import voodoo.provider.*
 import java.io.File
 
 fun main(args: Array<String>) {
-    withDefaultMain(arguments = args) {
+    withDefaultMain(root = File("pokemans"), arguments = args) {
         NestedPack(
             id = "pokemans",
             title = "Pokemans Reloaded",
