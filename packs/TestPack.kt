@@ -1,11 +1,12 @@
 #!/usr/bin/env kscript
-@file:DependsOnMaven("moe.nikky.voodoo-rewrite:dsl:0.4.0-142")
-@file:DependsOnMaven("ch.qos.logback:logback-classic:1.3.0-alpha4") //seems that i need a explicit dependency on this.. yet another bugreport
+@file:DependsOn("moe.nikky.voodoo-rewrite:dsl:0.4.+")
+//DEPS moe.nikky.voodoo-rewrite:core:0.4.0+
+@file:DependsOn("ch.qos.logback:logback-classic:1.3.0-alpha4") //seems that i need a explicit dependency on this.. yet another bugreport
 @file:MavenRepository("kotlinx","https://kotlin.bintray.com/kotlinx" )
 @file:MavenRepository("ktor", "https://dl.bintray.com/kotlin/ktor" )
 @file:MavenRepository("elytradev", "https://repo.elytradev.com" )
-@file:Include("../gen/src/Mod.kt")
-@file:Include("../gen/src/TexturePack.kt")
+@file:Include("../build/gen/Mod.kt")
+@file:Include("../build/gen//TexturePack.kt")
 //COMPILER_OPTS -jvm-target 1.8
 
 import voodoo.*

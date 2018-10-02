@@ -1,3 +1,3 @@
 rootProject.name = "VoodooSamples"
 
-include("gen")
+include(".gen")

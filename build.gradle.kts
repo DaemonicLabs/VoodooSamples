@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.2.70"
+    kotlin("jvm") version "1.2.71"
     application
     idea
 }
@@ -34,50 +34,60 @@ allprojects {
         jcenter()
         mavenLocal()
         maven { setUrl("https://repo.elytradev.com") }
-        maven { setUrl("https://dl.bintray.com/kotlin/ktor") }
         maven { setUrl("https://kotlin.bintray.com/kotlinx") }
     }
 }
 
-
-val gen_src = project("gen").file("src").apply {
-    mkdirs()
-}
-val gen = project("gen") {
+val dslVersion: String by project
+val genSrc = buildDir.resolve("gen").apply { mkdirs() }
+val genProject = project(".gen") {
     dependencies {
-        //    compile(group = "moe.nikky.voodoo-rewrite", name = "dsl", version = "0.4.0+")
+//        compile(group = "moe.nikky.voodoo-rewrite", name = "dsl", version = dslVersion)
         compile(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.0")
-        compile(group = "com.github.holgerbrandl", name = "kscript-annotations", version = "1.+")
     }
-
-    kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(gen_src.path)
+    kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(genSrc.path)
     idea {
         module {
-            generatedSourceDirs.add(gen_src)
+            generatedSourceDirs.add(genSrc)
         }
     }
 }
 
+val packDir: String by project
+kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(rootDir.resolve(packDir).apply { mkdirs() })
+
+val poet = task<JavaExec>("poet") {
+    main = "voodoo.CursePoetKt"
+    args = listOf(genSrc.path)
+    classpath = genProject.sourceSets["main"].runtimeClasspath
+    this.description = "generate curse mod listing"
+    this.group = "build"
+    dependsOn("${genProject.path}:classes")
+}
+
+val classes by tasks.getting(Task::class) {
+    dependsOn(poet)
+}
+
 dependencies {
-    compile(gen)
+    compile(genProject)
+    compile(group = "com.github.holgerbrandl", name = "kscript-annotations", version = "1.+")
 }
 
 application {
-//    mainClassName = "TestPackKt"
-    mainClassName = "PokemansKt"
+    // set this if you are gonna deal with just a single pack
+    mainClassName = "YouModpackFileKt"
 }
 
-kotlin.sourceSets.maybeCreate("main").kotlin.srcDir("packs")
-
-val generateCurseData = project("gen").task<JavaExec>("generateCurseData") {
-    main = "voodoo.CursePoetKt"
-    args = listOf(gen_src.path)
-    classpath = project("gen").sourceSets["main"].runtimeClasspath
-    dependsOn("classes")
-    this.description = "generate curse mod listing"
-    this.group = "build"
+task<JavaExec>("cotm") {
+    classpath = sourceSets["main"].runtimeClasspath
+    main = "CotMKt"
+    this.description = "Center of the Multiverse"
+    this.group = "application"
 }
-
-val build by tasks.getting(Task::class) {
-    dependsOn(generateCurseData)
+task<JavaExec>("pokemans") {
+    classpath = sourceSets["main"].runtimeClasspath
+    main = "PokemansKt"
+    this.description = "Pokemans"
+    this.group = "application"
 }
