@@ -6,6 +6,7 @@ out/
 run/
 kotlinc/
 .gen/
+gen/
 
 # TODO: set up gitignore automatically from voodoo
 workspace/
