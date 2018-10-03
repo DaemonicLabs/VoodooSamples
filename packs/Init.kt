@@ -5,9 +5,8 @@
 @file:MavenRepository("ktor", "https://dl.bintray.com/kotlin/ktor" )
 @file:MavenRepository("elytradev", "https://repo.elytradev.com" )
 
-import voodoo.cursePoet
 import java.io.File
 
 fun main(args: Array<String>) {
-    cursePoet(root = File("gen").resolve("src"))
+    poet(root = File("gen").resolve("src"))
 }

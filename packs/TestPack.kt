@@ -9,7 +9,6 @@
 @file:Include("../build/gen//TexturePack.kt")
 //COMPILER_OPTS -jvm-target 1.8
 
-import voodoo.*
 import voodoo.data.*
 import voodoo.data.curse.*
 import voodoo.data.nested.*
@@ -23,10 +22,10 @@ fun main(args: Array<String>) {
             version = "1.0",
             mcVersion = "1.12.2",
             //TODO: type = File
-            icon = "icon.png",
+            icon = root.resolve("icon.png"),
             authors = listOf("NikkyAi"),
             //TODO: type = {recommended, latest} | buildnumber, make sealed class
-            forge = "recommended",
+            forge = Forge.recommended,
             root = rootEntry(CurseProvider) {
                 optionals = false
                 releaseTypes = setOf(FileType.RELEASE, FileType.BETA)

@@ -57,7 +57,7 @@ val packDir: String by project
 kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(rootDir.resolve(packDir).apply { mkdirs() })
 
 val poet = task<JavaExec>("poet") {
-    main = "voodoo.CursePoetKt"
+    main = "PoetKt"
     args = listOf(genSrc.path)
     classpath = genProject.sourceSets["main"].runtimeClasspath
     this.description = "generate curse mod listing"
