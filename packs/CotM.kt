@@ -1,6 +1,5 @@
 #!/usr/bin/env kscript
-@file:DependsOnMaven("moe.nikky.voodoo:dsl:0.4.0") // for testing from local maven
-//@file:DependsOnMaven("moe.nikky.voodoo-rewrite:dsl:0.4.0-142")
+@file:DependsOnMaven("moe.nikky.voodoo:dsl:0.4.+")
 @file:DependsOnMaven("ch.qos.logback:logback-classic:jar:1.2.3")
 @file:MavenRepository("kotlinx","https://kotlin.bintray.com/kotlinx" )
 @file:MavenRepository("elytradev", "https://repo.elytradev.com")

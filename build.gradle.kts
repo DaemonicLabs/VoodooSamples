@@ -42,8 +42,8 @@ val dslVersion: String by project
 val genSrc = rootDir.resolve("gen").resolve("src").apply { mkdirs() }
 val genProject = project("gen") {
     dependencies {
-        //        compile(group = "moe.nikky.voodoo-rewrite", name = "dsl", version = dslVersion)
-        compile(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.0")
+        compile(group = "moe.nikky.voodoo", name = "dsl", version = dslVersion)
+//        compile(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.0")
     }
     kotlin.sourceSets.maybeCreate("main").kotlin.srcDir(genSrc.path)
     idea {
@@ -88,6 +88,6 @@ rootDir.resolve(packDir)
             main = "${name}Kt"
             this.description = name
             this.group = "application"
-//            dependsOn(poet)
+            dependsOn(poet)
         }
     }
