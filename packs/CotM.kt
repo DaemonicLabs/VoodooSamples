@@ -13,23 +13,22 @@
 import com.skcraft.launcher.model.modpack.Recommendation
 import voodoo.data.*
 import voodoo.data.curse.*
-import voodoo.data.nested.*
 import voodoo.provider.*
-import java.io.File
+import voodoo.withDefaultMain
 
 fun main(args: Array<String>) = withDefaultMain(
     arguments = args,
-    root = File("cotm")
+    root = Constants.rootDir
 ) {
-    NestedPack(
+    nestedPack(
         id = "cotm",
-        title = "Center of the Multiverse",
-        authors = listOf("AnsuzThuriaz", "Falkreon", "NikkyAi"),
-        version = "2.1.9",
-        mcVersion = "1.12.2", //TODO: generate sealed class with mc version -> see forge versions
-        forge = Forge.mc1_12_2.build2759, //TODO: generate file with compatible forge version  //TODO: type = {recommended, latest} | buildnumber, make sealed class
-        icon = root.resolve("icon.png"), //TODO: type = File
-        sourceDir = "src",
+        mcVersion = "1.12.2"
+    ) {
+        title = "Center of the Multiverse"
+        authors = listOf("AnsuzThuriaz", "Falkreon", "NikkyAi")
+        version = "2.1.9" //TODO: generate sealed class with mc version -> see forge versions
+        forge = Forge.mc1_12_2.build2759
+        icon = rootDir.resolve("icon.png")
         userFiles = UserFiles(
             include = listOf(
                 "options.txt",
@@ -37,11 +36,10 @@ fun main(args: Array<String>) = withDefaultMain(
                 "foamfix.cfg"
             ),
             exclude = listOf("")
-        ),
+        )
         root = rootEntry(CurseProvider) {
             releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
             validMcVersions = setOf("1.12.1", "1.12")
-            //TODO: use type URL ?
             metaUrl = "https://curse.nikky.moe/api"
             optionals = false
             list {
@@ -302,15 +300,15 @@ fun main(args: Array<String>) = withDefaultMain(
                 }.list {
                     id(Mod.laggoggles) {
                         description =
-                            "***Admin/diagnostic tool. Leave off unless asked to help test performance issues."
+                                "***Admin/diagnostic tool. Leave off unless asked to help test performance issues."
                     }
                     id(Mod.sampler) {
                         description =
-                            "***Admin/diagnostic tool. Leave off unless asked to help test performance issues."
+                                "***Admin/diagnostic tool. Leave off unless asked to help test performance issues."
                     }
                     id(Mod.openeye) {
                         description =
-                            "Automatically collects and submits crash reports. Enable if asked or wish to help sort issues with the pack."
+                                "Automatically collects and submits crash reports. Enable if asked or wish to help sort issues with the pack."
                     }
                 }
                 group {
@@ -396,7 +394,7 @@ fun main(args: Array<String>) = withDefaultMain(
                         }
                         id(Mod.minemenu) {
                             description =
-                                "Radial menu that can be used for command/keyboard shortcuts. Not selected by default because random keybinds cannot be added to radial menu."
+                                    "Radial menu that can be used for command/keyboard shortcuts. Not selected by default because random keybinds cannot be added to radial menu."
                         }
                         id(Mod.itemzoom) {
                             description = "Check this if you like to get a closer look at item textures."
@@ -409,20 +407,20 @@ fun main(args: Array<String>) = withDefaultMain(
                         }
                         id(Mod.fancyBlockParticles) {
                             description =
-                                "Caution: Resource heavy. Adds some flair to particle effects and animations. Highly configurable, costs fps. (Defaults set to be less intrusive.)"
+                                    "Caution: Resource heavy. Adds some flair to particle effects and animations. Highly configurable, costs fps. (Defaults set to be less intrusive.)"
                         }
                         id(Mod.dynamicSurroundings) {
                             description =
-                                "Caution: Resource heavy. Quite nice, has a lot of configurable features that add immersive sound/visual effects. Includes light-level overlay. (Defaults set to remove some sounds and generally be better.)"
+                                    "Caution: Resource heavy. Quite nice, has a lot of configurable features that add immersive sound/visual effects. Includes light-level overlay. (Defaults set to remove some sounds and generally be better.)"
                         }
                         id(Mod.rpgHud) {
                             description =
-                                "Highly configurable HUD - heavier alt to Neat. (Configured for compatibility with other mods.)"
+                                    "Highly configurable HUD - heavier alt to Neat. (Configured for compatibility with other mods.)"
 
                         }
                         id(Mod.betterFoliage) {
                             description =
-                                "Improves the fauna in the world. Very heavy, but very pretty. (Sane defaults set.)"
+                                    "Improves the fauna in the world. Very heavy, but very pretty. (Sane defaults set.)"
                         }
                         id(Mod.keyboardWizard) {
                             description = "Visual keybind manager."
@@ -439,7 +437,7 @@ fun main(args: Array<String>) = withDefaultMain(
                         id("unity") {
                             fileName = "Unity.zip"
                             description =
-                                "Multi-mod compatible resource pack. Very nice, but does have some broken textures here and there."
+                                    "Multi-mod compatible resource pack. Very nice, but does have some broken textures here and there."
                         }
                         withProvider(DirectProvider).list {
                             id("slice") {
@@ -451,5 +449,5 @@ fun main(args: Array<String>) = withDefaultMain(
                 }
             }
         }
-    )
+    }
 }

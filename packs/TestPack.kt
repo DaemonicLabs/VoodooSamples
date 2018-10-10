@@ -11,22 +11,25 @@
 
 import voodoo.data.Side
 import voodoo.data.curse.FileType
-import voodoo.data.nested.NestedPack
 import voodoo.provider.CurseProvider
 import voodoo.provider.JenkinsProvider
-import java.io.File
+import voodoo.withDefaultMain
 
 fun main(args: Array<String>) {
-    withDefaultMain(root = File("testpack"), arguments = args) {
-        NestedPack(
+    withDefaultMain(
+        root = Constants.rootDir,
+        arguments = args
+    ) {
+        nestedPack(
             id = "testpack",
-            version = "1.0",
-            mcVersion = "1.12.2",
+            mcVersion = "1.12.2"
+        ) {
+            version = "1.0"
             //TODO: type = File
-            icon = root.resolve("icon.png"),
-            authors = listOf("NikkyAi"),
+            icon = rootDir.resolve("icon.png")
+            authors = listOf("NikkyAi")
             //TODO: type = {recommended, latest} | buildnumber, make sealed class
-            forge = Forge.recommended,
+            forge = Forge.recommended
             root = rootEntry(CurseProvider) {
                 optionals = false
                 releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
@@ -52,7 +55,7 @@ fun main(args: Array<String>) {
                     id(Mod::wearableBackpacks)
                 }
             }
-        )
+        }
     }
 }
 
