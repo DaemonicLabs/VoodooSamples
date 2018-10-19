@@ -31,28 +31,26 @@ fun main(args: Array<String>) {
             //TODO: type = {recommended, latest} | buildnumber, make sealed class
             forge = Forge.recommended
             root = rootEntry(CurseProvider) {
-                optionals = false
                 releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
 
                 //TODO: use type URL ?
                 metaUrl = "https://curse.nikky.moe/api"
                 list {
-                    id(Mod::botania) optionals false
+                    +Mod::botania
 
-                    id(Mod::rftools) {
-                        optionals = false
+                    +Mod::rftools configure {
                     }
 
                     withProvider(JenkinsProvider) {
                         jenkinsUrl = "https://ci.elytradev.com"
                         side = Side.SERVER
                     }.list {
-                        id("matterlink") job "elytra/MatterLink/master"
-                        id("elytra/BTFU/multi-version")
+                        +"matterlink" job "elytra/MatterLink/master"
+                        +"elytra/BTFU/multi-version"
                     }
 
-                    id(Mod::tails)
-                    id(Mod::wearableBackpacks)
+                    +Mod::tails
+                    +Mod::wearableBackpacks
                 }
             }
         }
