@@ -36,42 +36,42 @@ fun main(args: Array<String>) = withDefaultMain(
             releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
             list {
                 //TODO: group mods by category (eg. tweakers)
-                add(Mod.abyssalcraft)
-                add(Mod.advancedRocketry) configure {
+                +Mod.abyssalcraft
+                +Mod.advancedRocketry configure {
                     releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
                 }
-                add(Mod.apricornTreeFarm)
-                add(Mod.armorplus)
-                add(Mod.betterfps)
-                add(Mod.chiselsBits)
-                add(Mod.crafttweaker)
-                add(Mod.customNpcs)
-                add(Mod.enderIo)
-                add(Mod.extraBitManipulation)
-                add(Mod.farseek)
-                add(Mod.foamfixForMinecraft)
-                add(Mod.immersiveEngineering)
-                add(Mod.industrialCraft)
-                add(Mod.ivtoolkit)
-                add(Mod.jei)
-                add(Mod.lingeringLoot)
-                add(Mod.minecolonies)
-                add(Mod.minecraftFlightSimulator)
-                add(Mod.modtweaker)
-                add(Mod.multiMine)
-                add(Mod.openmodularturrets)
-                add(Mod.pamsHarvestcraft)
-                add(Mod.quark)
-                add(Mod.railcraft)
-                add(Mod.recurrentComplex)
-                add(Mod.repose)
-                add(Mod.roguelikeDungeons)
-                add(Mod.streams)
-                add(Mod.structuredCrafting)
-                add(Mod.tails)
-                add(Mod.tinkersConstruct)
-                add(Mod.timberjack)
-                add(Mod.wearableBackpacks)
+                +Mod.apricornTreeFarm
+                +Mod.armorplus
+                +Mod.betterfps
+                +Mod.chiselsBits
+                +Mod.crafttweaker
+                +Mod.customNpcs
+                +Mod.enderIo
+                +Mod.extraBitManipulation
+                +Mod.farseek
+                +Mod.foamfixForMinecraft
+                +Mod.immersiveEngineering
+                +Mod.industrialCraft
+                +Mod.ivtoolkit
+                +Mod.jei
+                +Mod.lingeringLoot
+                +Mod.minecolonies
+                +Mod.minecraftFlightSimulator
+                +Mod.modtweaker
+                +Mod.multiMine
+                +Mod.openmodularturrets
+                +Mod.pamsHarvestcraft
+                +Mod.quark
+                +Mod.railcraft
+                +Mod.recurrentComplex
+                +Mod.repose
+                +Mod.roguelikeDungeons
+                +Mod.streams
+                +Mod.structuredCrafting
+                +Mod.tails
+                +Mod.tinkersConstruct
+                +Mod.timberjack
+                +Mod.wearableBackpacks
 
                 withProvider(DirectProvider)
                     .list {
@@ -98,7 +98,7 @@ fun main(args: Array<String>) = withDefaultMain(
                             recommendation = Recommendation.starred
                         }
                     }.list {
-                        add(Mod.xaerosMinimap) configure {
+                        +Mod.xaerosMinimap configure {
                             description = "lightweight minimap"
                         }
                         // infix notation

@@ -36,9 +36,9 @@ fun main(args: Array<String>) {
                 //TODO: use type URL ?
                 metaUrl = "https://curse.nikky.moe/api"
                 list {
-                    +Mod::botania
+                    +Mod.botania
 
-                    +Mod::rftools configure {
+                    +Mod.rftools configure {
                     }
 
                     withProvider(JenkinsProvider) {
@@ -49,8 +49,8 @@ fun main(args: Array<String>) {
                         +"elytra/BTFU/multi-version"
                     }
 
-                    +Mod::tails
-                    +Mod::wearableBackpacks
+                    +Mod.tails
+                    +Mod.wearableBackpacks
                 }
             }
         }
