@@ -1,16 +1,3 @@
-#!/usr/bin/env kscript
-@file:DependsOn("moe.nikky.voodoo:dsl:0.4.+")
-@file:DependsOn("ch.qos.logback:logback-classic:1.3.0-alpha4") //seems that i need a explicit dependency on this.. yet another bugreport
-@file:MavenRepository("kotlinx", "https://kotlin.bintray.com/kotlinx")
-@file:MavenRepository("elytradev", "https://repo.elytradev.com")
-@file:KotlinOpts("-J-Xmx5g")
-@file:KotlinOpts("-J-server")
-@file:Include("../.voodoo/Mod.kt")
-@file:Include("../.voodoo/TexturePack.kt")
-@file:Include("../.voodoo/Forge.kt")
-
-//COMPILER_OPTS -jvm-target 1.8
-
 import com.skcraft.launcher.model.modpack.Recommendation
 import voodoo.data.Side
 import voodoo.data.UserFiles
