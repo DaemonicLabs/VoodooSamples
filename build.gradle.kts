@@ -1,5 +1,5 @@
 plugins {
-    id("voodoo") version "0.4.4-SNAPSHOT"
+    id("voodoo") version "0.4.5-dev"
 }
 
 voodoo {
@@ -13,11 +13,15 @@ voodoo {
 }
 
 // only required for plugin dev
-//repositories {
-//    mavenLocal()
+repositories {
+    mavenLocal()
+}
+
+//dependencies {
+//    implementation("")
 //}
 
 tasks.withType<Wrapper> {
-    gradleVersion = "5.0"
-    distributionType = Wrapper.DistributionType.ALL
+    gradleVersion = "5.1.1"
+    distributionType = Wrapper.DistributionType.BIN
 }

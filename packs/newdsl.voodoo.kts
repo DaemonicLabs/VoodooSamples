@@ -11,10 +11,7 @@ docs {
     //        tomeRoot = rootDir.resolve("docs")
 }
 
-nestedPack(
-    id = "newdsl",
     mcVersion = "1.12.2"
-) {
     title = "Awesome Pack"
     version = "1.0"
     forge = Forge.recommended
@@ -165,5 +162,5 @@ nestedPack(
             }
         }
     }
-}
+
 
