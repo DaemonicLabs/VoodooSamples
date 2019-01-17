@@ -1,5 +1,5 @@
 {
-    id: /home/nikky/dev/VoodooSamples/packs/CotM,
+    id: CotM,
     mcVersion: 1.12.2,
     title: "Center of the Multiverse",
     version: 2.1.9,
@@ -20,7 +20,7 @@
             
         ]
     },
-    sourceDir: /home/nikky/dev/VoodooSamples/packs/CotM,
+    sourceDir: CotM,
     features: [
         {
             entries: [

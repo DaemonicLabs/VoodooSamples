@@ -4,97 +4,96 @@ import voodoo.data.curse.FileType
 import voodoo.provider.CurseProvider
 import voodoo.provider.JenkinsProvider
 
-
-        mcVersion = "1.12.2"
-        title = "1.12.2 Pack v4"
-        authors = listOf("therealfarfetchd")
-        version = "1.0.0"
-        forge = Forge.mc1_12_2_latest
-        icon = rootDir.resolve("icon.png")
-        userFiles = UserFiles(
-            include = listOf(
-                "options.txt",
-                "quark.cfg",
-                "foamfix.cfg"
-            ),
-            exclude = listOf("")
-        )
-        root = rootEntry(CurseProvider) {
-            releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
-            validMcVersions = setOf("1.12.2", "1.12.1", "1.12")
+mcVersion = "1.12.2"
+title = "1.12.2 Pack v4"
+authors = listOf("therealfarfetchd")
+version = "1.0.0"
+forge = Forge.mc1_12_2_latest
+icon = rootDir.resolve("icon.png")
+userFiles = UserFiles(
+    include = listOf(
+        "options.txt",
+        "quark.cfg",
+        "foamfix.cfg"
+    ),
+    exclude = listOf("")
+)
+root = rootEntry(CurseProvider) {
+    releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
+    validMcVersions = setOf("1.12.2", "1.12.1", "1.12")
 //            metaUrl = "https://curse.nikky.moe/api"
-            list {
-                +"buildcraft"
-                +"buildcraft-compat"
-                +"forestry"
-                +"binnies-mods"
-                +"additional-pipes-for-buildcraft"
-                +"industrial-craft"
-                +"compact-solars"
-                +"world-control"
-                +"project-red-base"
-                +"project-red-integration"
-                +"project-red-lighting"
-                +"project-red-fabrication"
-                +"project-red-mechanical"
-                +"project-red-world"
-                +"project-red-compat"
-                +"advanced-rocketry"
-                +"the-aether-ii"
-                +"minecraft-transport-simulator"
-                +"transport-simulator-official-vehicle-set"
-                +"iron-chests"
-                +"mystcraft"
-                +"biomes-o-plenty"
-                +"traverse"
-                +"valkyrien-warfare"
-                +"wireless-redstone-cbe"
+    list {
+        +Mod.buildcraft
+        +Mod.buildcraftCompat
+        +Mod.forestry
+        +Mod.binniesMods
+        +Mod.additionalPipesForBuildcraft
+        +Mod.industrialCraft
+        +Mod.compactSolars
+        +Mod.worldControl
+        +Mod.projectRedBase
+        +Mod.projectRedIntegration
+        +Mod.projectRedLighting
+        +Mod.projectRedFabrication
+        +Mod.projectRedMechanical
+        +Mod.projectRedWorld
+        +Mod.projectRedCompat
+        +Mod.advancedRocketry
+        +Mod.theAetherIi
+        +Mod.minecraftTransportSimulator
+        +Mod.transportSimulatorOfficialVehicleSet
+        +Mod.ironChests
+        +Mod.mystcraft
+        +Mod.biomesOPlenty
+        +Mod.traverse
+        +Mod.valkyrienWarfare
+        +Mod.wirelessRedstoneCbe
 
-                // Misc.
-                +"chicken-chunks-1-8"
-                +"project-74246" // doomlike dungeons
-                +"muon"
-                +"morpheus"
-                +"quark"
-                +"streams"
-                +"yabba"
+        // Misc.
+        +Mod.chickenChunks18
+        +Mod.project74246 // doomlike dungeons
+        +Mod.muon
+        +Mod.morpheus
+        +Mod.quark
+        +Mod.streams
+        +Mod.yabba
 
-                // Util mods
-                +"back-tools"
-                +"better-placement"
-                +"dynamic-surroundings"
-                +"foamfix-for-minecraft"
-                +"gotta-go-fast"
-                +"inventory-tweaks"
-                +"jei"
-                +"jei-bees"
-                +"just-enough-resources-jer"
-                +"just-enough-pattern-banners"
-                +"mapwriter-2"
-                +"openeye"
-                +"vanillafix"
+        // Util mods
+        +Mod.backTools
+        +Mod.betterPlacement
+        +Mod.dynamicSurroundings
+        +Mod.foamfixForMinecraft
+        +Mod.gottaGoFast
+        +Mod.inventoryTweaks
+        +Mod.jei
+        +Mod.jeiBees
+        +Mod.justEnoughResourcesJer
+        +Mod.justEnoughPatternBanners
+        +Mod.mapwriter2
+        +Mod.openeye
+        +Mod.vanillafix
 
-                withProvider(JenkinsProvider) {
-                    jenkinsUrl = "https://ci.rs485.network"
-                }.list {
-                    +"logisticspipes" job "LogisticsPipes-0.10-mc112"
-                }
-
-                group {
-                    side = Side.CLIENT
-                }.list {
-                    +"blur"
-                    +"better-foliage"
-                    +"betterfps"
-                    +"discordsuite"
-                    +"first-person-render"
-                    +"itemphysic-lite"
-                    +"justthetips"
-                    +"keyboard-wizard"
-                    +"mage"
-                    // +"shoulder-surfing-reloaded"
-                    +"sound-filters"
-                    +"tipthescales"
-                }
-            }
+        withProvider(JenkinsProvider) {
+            jenkinsUrl = "https://ci.rs485.network"
+        }.list {
+            +"logisticspipes" job "LogisticsPipes-0.10-mc112"
         }
+
+        group {
+            side = Side.CLIENT
+        }.list {
+            +Mod.blur
+            +Mod.betterFoliage
+            +Mod.betterfps
+            +Mod.discordsuite
+            +Mod.firstPersonRender
+            +Mod.itemphysicLite
+            +Mod.justthetips
+            +Mod.keyboardWizard
+            +Mod.mage
+            // +"shoulder-surfing-reloaded"
+            +Mod.soundFilters
+            +Mod.tipthescales
+        }
+    }
+}

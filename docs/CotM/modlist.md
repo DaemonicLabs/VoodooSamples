@@ -1,6 +1,6 @@
 Title | Center of the Multiverse
 ---|---
-ID | `/home/nikky/dev/VoodooSamples/packs/CotM`
+ID | `CotM`
 Pack Version | `2.1.9`
 MC Version | `1.12.2`
 Forge Version | `14.23.4.2759`
