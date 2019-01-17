@@ -1,5 +1,5 @@
 plugins {
-    id("voodoo") version "0.4.5-dev"
+    id("voodoo") version "0.4.5-SNAPSHOT"
 }
 
 voodoo {
@@ -13,12 +13,8 @@ voodoo {
 }
 
 // only required for plugin dev
-repositories {
-    mavenLocal()
-}
-
-//dependencies {
-//    implementation("")
+//repositories {
+//    mavenLocal()
 //}
 
 tasks.withType<Wrapper> {
