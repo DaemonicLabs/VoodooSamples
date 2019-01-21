@@ -3,12 +3,10 @@ import voodoo.data.curse.FileType
 
 mcVersion = "1.12.2"
 version = "1.0"
-//TODO: type = File
 icon = rootDir.resolve("icon.png")
 authors = listOf("NikkyAi")
-//TODO: type = {recommended, latest} | buildnumber, make sealed class
 forge = Forge.recommended
-root = rootEntry(CurseProvider) {
+root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
 
     //TODO: use type URL ?

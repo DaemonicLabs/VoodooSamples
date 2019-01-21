@@ -20,7 +20,7 @@ userFiles = UserFiles(
     ),
     exclude = listOf("")
 )
-root = rootEntry(CurseProvider) {
+root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
     validMcVersions = setOf("1.12.1", "1.12")
     metaUrl = "https://curse.nikky.moe/api"

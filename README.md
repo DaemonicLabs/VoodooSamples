@@ -6,7 +6,7 @@ https://github.com/holgerbrandl/kscript/issues/166
 
 run the test pack with
 ```bash
-./gradew testpack --args "build - pack sk"
+./gradlew testPack.voodoo.kts --args "build - pack sk"
 ```
 
 ## Intellij IDEA

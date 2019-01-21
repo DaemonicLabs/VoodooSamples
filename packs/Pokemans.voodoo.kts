@@ -8,7 +8,7 @@ version = "1.0"
 icon = rootDir.resolve("icon.png")
 authors = listOf("capitalthree", "NikkyAi")
 forge = Forge.mc1_10_2.build2422
-root = rootEntry(CurseProvider) {
+root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
     list {
         //TODO: group mods by category (eg. tweakers)

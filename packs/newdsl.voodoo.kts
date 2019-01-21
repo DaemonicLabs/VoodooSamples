@@ -1,9 +1,5 @@
 import com.skcraft.launcher.model.modpack.Recommendation
 
-docs {
-    //        tomeRoot = rootDir.resolve("docs")
-}
-
 mcVersion = "1.12.2"
 title = "Awesome Pack"
 version = "1.0"
@@ -32,7 +28,9 @@ root = rootEntry(CurseProvider) {
             }
         }
 
-        withProvider(DirectProvider).list {
+        withProvider(DirectProvider){
+            useUrlTxt = false
+        }.list {
             +"betterBuilderWands" configure {
                 name = "Better Builder's Wands"
                 url =
