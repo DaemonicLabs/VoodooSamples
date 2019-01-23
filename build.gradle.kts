@@ -1,5 +1,4 @@
 plugins {
-    kotlin("jvm") version "1.3.20-eap-100"
     id("voodoo") version "0.4.5-SNAPSHOT"
 }
 
@@ -29,8 +28,10 @@ repositories {
         name = "jitpack"
     }
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
-    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.5-SNAPSHOT")
+    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.5+")
+    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.5+")
 }
