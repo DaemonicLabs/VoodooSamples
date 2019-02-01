@@ -1,0 +1,7 @@
+{
+    provider: CURSE,
+    id: pams-harvestcraft,
+    projectID: 221857,
+    fileID: 2428363,
+    name: "Pam's HarvestCraft"
+}

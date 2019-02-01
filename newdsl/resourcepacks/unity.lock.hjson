@@ -1,0 +1,8 @@
+{
+    provider: CURSE,
+    id: unity,
+    fileName: Unity.zip,
+    projectID: 222097,
+    fileID: 2576530,
+    name: Unity
+}

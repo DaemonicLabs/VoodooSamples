@@ -1,0 +1,7 @@
+{
+    provider: DIRECT,
+    id: nutrition,
+    url: "https://github.com/WesCook/Nutrition/releases/download/v3.4.0/Nutrition-1.12.2-3.4.0.jar",
+    useUrlTxt: false,
+    name: nutrition
+}

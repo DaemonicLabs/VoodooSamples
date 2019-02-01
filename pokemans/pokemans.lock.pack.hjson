@@ -1,0 +1,25 @@
+{
+    id: pokemans,
+    mcVersion: 1.10.2,
+    title: "Pokemans Reloaded",
+    icon: /home/nikky/dev/VoodooSamples/icon.png,
+    authors: [
+        capitalthree,
+        NikkyAi
+    ],
+    forge: 2422,
+    sourceDir: pokemans,
+    features: [
+        {
+            entries: [
+                xaeros-minimap
+            ],
+            feature: {
+                name: "Xaero's Minimap",
+                selected: true,
+                description: "lightweight minimap",
+                recommendation: starred
+            }
+        }
+    ]
+}

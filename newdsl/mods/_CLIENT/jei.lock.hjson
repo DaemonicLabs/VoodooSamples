@@ -1,0 +1,8 @@
+{
+    provider: CURSE,
+    id: jei,
+    side: CLIENT,
+    projectID: 238222,
+    fileID: 2663408,
+    name: "Just Enough Items (JEI)"
+}

@@ -1,0 +1,7 @@
+{
+    provider: CURSE,
+    id: client-tweaks,
+    projectID: 251407,
+    fileID: 2624712,
+    name: "Client Tweaks"
+}

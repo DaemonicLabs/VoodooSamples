@@ -1,0 +1,7 @@
+{
+    provider: LOCAL,
+    id: someMod,
+    fileName: SomeMod.jar,
+    fileSrc: someMod/build/libs/SomeMod-1.0.jar,
+    name: SomeMod
+}

@@ -1,0 +1,7 @@
+{
+    provider: CURSE,
+    id: custom-npcs,
+    projectID: 221826,
+    fileID: 2453935,
+    name: "Custom NPCs"
+}

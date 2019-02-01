@@ -1,0 +1,7 @@
+{
+    provider: CURSE,
+    id: minemenu,
+    projectID: 222378,
+    fileID: 2650003,
+    name: MineMenu
+}
