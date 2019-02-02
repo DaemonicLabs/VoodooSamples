@@ -1,8 +1,6 @@
 {
     provider: JENKINS,
-    id: probe-data-provider,
     jenkinsUrl: "https://ci.elytradev.com",
     job: elytra/ProbeDataProvider/1.10.2,
-    buildNumber: 2,
-    name: "elytra/ProbeDataProvider/1.10.2 2"
+    buildNumber: 2
 }

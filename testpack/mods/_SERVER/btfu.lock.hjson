@@ -1,0 +1,7 @@
+{
+    provider: JENKINS,
+    side: SERVER,
+    jenkinsUrl: "https://ci.elytradev.com",
+    job: elytra/BTFU/multi-version,
+    buildNumber: 6
+}

@@ -22,7 +22,7 @@ root(CurseProvider) {
             side = Side.SERVER
         }.list {
             +"matterlink" job "elytra/MatterLink/master"
-            +"elytra/BTFU/multi-version"
+            +"btfu" job "elytra/BTFU/multi-version"
         }
 
         +Mod.tails

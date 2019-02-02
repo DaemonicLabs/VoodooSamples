@@ -14,7 +14,7 @@ generateHtml = { modpack, lockPack ->
                     |""".trimMargin()
         )
 
-        modpack.lockEntrySet.sortedBy { it.name.toLowerCase() }.forEach { entry ->
+        modpack.lockEntrySet.sortedBy { it.displayName.toLowerCase() }.forEach { entry ->
             val provider = Providers[entry.provider]
             val thumbnailUrl = provider.getThumbnail(entry)
             val title = provider.generateName(entry)

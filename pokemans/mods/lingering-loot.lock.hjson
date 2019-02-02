@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: lingering-loot,
     projectID: 245041,
-    fileID: 2307565,
-    name: "Lingering Loot"
+    fileID: 2307565
 }

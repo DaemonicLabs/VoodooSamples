@@ -272,7 +272,7 @@ root(CurseProvider) {
 
         group {
             side = Side.BOTH
-            feature {
+            optional {
                 selected = false
             }
         }.list {
@@ -313,9 +313,9 @@ root(CurseProvider) {
             +Mod.betterAdvancements
             //OPT-OUT
             group {
-                feature {
+                optional {
                     selected = true
-                    recommendation = Recommendation.starred
+                    skRecommendation = Recommendation.starred
                 }
             }.list {
                 +Mod.journeymap configure {
@@ -360,7 +360,7 @@ root(CurseProvider) {
             }
             //OPT-IN
             group {
-                feature {
+                optional {
                     selected = false
                 }
             }.list {

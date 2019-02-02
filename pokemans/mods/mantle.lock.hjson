@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: mantle,
     projectID: 74924,
-    fileID: 2380279,
-    name: Mantle
+    fileID: 2380279
 }

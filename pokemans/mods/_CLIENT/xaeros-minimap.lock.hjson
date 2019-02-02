@@ -1,8 +1,11 @@
 {
     provider: CURSE,
-    id: xaeros-minimap,
     side: CLIENT,
+    description: "lightweight minimap",
+    optionalData: {
+        selected: true,
+        skRecommendation: starred
+    },
     projectID: 263420,
-    fileID: 2665010,
-    name: "Xaero's Minimap"
+    fileID: 2665010
 }

@@ -1,5 +1,5 @@
 plugins {
-    id("voodoo") version "0.4.5-dev"
+    id("voodoo") version "0.4.6-dev"
 }
 
 voodoo {
@@ -27,6 +27,6 @@ repositories {
 }
 
 dependencies {
-    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.5-dev")
-    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.5-dev")
+    implementation(group = "moe.nikky.voodoo", name = "dsl", version = "0.4.6-dev")
+    implementation(group = "moe.nikky.voodoo", name = "voodoo", version = "0.4.6-dev")
 }

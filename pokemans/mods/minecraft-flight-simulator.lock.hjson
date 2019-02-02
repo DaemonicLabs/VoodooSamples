@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: minecraft-flight-simulator,
     projectID: 240775,
-    fileID: 2355883,
-    name: "Minecraft Flight Simulator"
+    fileID: 2355883
 }

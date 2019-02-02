@@ -7,4 +7,4 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
-rootProject.name = "VoodooSamples"
+rootProject.name = "voodoo-samples"

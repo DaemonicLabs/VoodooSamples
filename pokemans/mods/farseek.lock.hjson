@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: farseek,
     projectID: 229708,
-    fileID: 2479917,
-    name: Farseek
+    fileID: 2479917
 }

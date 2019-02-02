@@ -1,7 +1,10 @@
 {
     provider: CURSE,
-    id: armorplus,
+    dependencies: {
+        REQUIRED: [
+            thedragonlib
+        ]
+    },
     projectID: 237366,
-    fileID: 2431043,
-    name: ArmorPlus
+    fileID: 2431043
 }

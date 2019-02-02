@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: omlib,
     projectID: 254334,
-    fileID: 2549769,
-    name: OMLib
+    fileID: 2549769
 }

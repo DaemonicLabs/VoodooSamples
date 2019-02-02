@@ -1,7 +1,5 @@
 {
     provider: CURSE,
-    id: multi-mine,
     projectID: 227887,
-    fileID: 2312754,
-    name: "Multi Mine"
+    fileID: 2312754
 }

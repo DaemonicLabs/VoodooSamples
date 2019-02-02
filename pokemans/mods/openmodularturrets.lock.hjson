@@ -1,7 +1,10 @@
 {
     provider: CURSE,
-    id: openmodularturrets,
+    dependencies: {
+        REQUIRED: [
+            omlib
+        ]
+    },
     projectID: 224663,
-    fileID: 2575475,
-    name: OpenModularTurrets
+    fileID: 2575475
 }

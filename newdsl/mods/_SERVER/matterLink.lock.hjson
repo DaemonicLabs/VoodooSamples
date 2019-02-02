@@ -1,9 +1,0 @@
-{
-    provider: JENKINS,
-    id: matterLink,
-    side: SERVER,
-    jenkinsUrl: "https://ci.elytradev.com",
-    job: elytra/MatterLink/master,
-    buildNumber: 184,
-    name: "elytra/MatterLink/master 184"
-}

@@ -1,0 +1,10 @@
+{
+    id: testpack,
+    mcVersion: 1.12.2,
+    icon: /home/nikky/dev/Voodoo/samples/icon.png,
+    authors: [
+        NikkyAi
+    ],
+    forge: 2768,
+    sourceDir: testpack
+}

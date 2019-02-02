@@ -1,6 +1,4 @@
 import com.skcraft.launcher.model.modpack.Recommendation
-import voodoo.data.Side
-import voodoo.data.curse.FileType
 
 mcVersion = "1.10.2"
 title = "Pokemans Reloaded"
@@ -51,11 +49,13 @@ root(CurseProvider) {
 
         withProvider(DirectProvider)
             .list {
+                //TODO: change to local
                 +"pixelmonDark" configure {
                     url =
                         "https://meowface.org/craft/repo/objects/db/5d/db5db11bcda204362d62705b1d5f4e5783f95c2c"
                     fileName = "PixelmonDark2.4.jar"
                 }
+                //TODO: change to local
                 +"gameShark" configure {
                     url =
                         "https://meowface.org/craft/repo/objects/b9/21/b9216143fd5214c31e109b24fb1513eb8b23bc77"
@@ -69,9 +69,9 @@ root(CurseProvider) {
             side = Side.CLIENT
         }.list {
             group {
-                feature {
+                optional {
                     selected = true
-                    recommendation = Recommendation.starred
+                    skRecommendation = Recommendation.starred
                 }
             }.list {
                 +Mod.xaerosMinimap configure {
@@ -81,11 +81,11 @@ root(CurseProvider) {
 //                        add(Mod.xaerosMinimap) description "lightweight minimap"
             }
             group {
-                feature {
+                optional {
                     selected = false
                 }
             }.list {
-                //TODO: add Optifine
+                //TODO: add Optifine ?
             }
         }
 

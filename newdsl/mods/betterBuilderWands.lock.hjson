@@ -1,7 +1,0 @@
-{
-    provider: DIRECT,
-    id: betterBuilderWands,
-    url: "https://centerofthemultiverse.net/launcher/mirror/BetterBuildersWands-1.12-0.11.1.245+69d0d70.jar",
-    useUrlTxt: false,
-    name: "Better Builder's Wands"
-}

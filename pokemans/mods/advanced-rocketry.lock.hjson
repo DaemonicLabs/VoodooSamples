@@ -1,7 +1,10 @@
 {
     provider: CURSE,
-    id: advanced-rocketry,
+    dependencies: {
+        REQUIRED: [
+            libvulpes
+        ]
+    },
     projectID: 236542,
-    fileID: 2583326,
-    name: "Advanced Rocketry"
+    fileID: 2583326
 }

@@ -1,6 +1,0 @@
-{
-    provider: LOCAL,
-    id: slice,
-    fileSrc: ressourcepacks/Slice.zip,
-    name: ressourcepacks
-}

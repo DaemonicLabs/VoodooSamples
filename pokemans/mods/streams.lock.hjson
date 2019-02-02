@@ -1,7 +1,10 @@
 {
     provider: CURSE,
-    id: streams,
+    dependencies: {
+        REQUIRED: [
+            farseek
+        ]
+    },
     projectID: 229769,
-    fileID: 2479926,
-    name: Streams
+    fileID: 2479926
 }
