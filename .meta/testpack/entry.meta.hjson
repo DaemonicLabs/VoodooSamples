@@ -243,6 +243,36 @@
             value: `aidancbrady`
         }
     },
+    mouse-tweaks: {
+        id: {
+            name: ID,
+            value: `mouse-tweaks`
+        },
+        version: {
+            name: Version,
+            value: "`[1.12.2] Mouse Tweaks 2.9`"
+        },
+        provider: {
+            name: Provider,
+            value: `CURSE`
+        },
+        side: {
+            name: Side,
+            value: `BOTH`
+        },
+        optional: {
+            name: Optional,
+            value: `false`
+        },
+        curse_release_type: {
+            name: "Release Type",
+            value: `RELEASE`
+        },
+        curse_author: {
+            name: Author,
+            value: `YaLTeR97`
+        }
+    },
     rftools: {
         id: {
             name: ID,
@@ -255,10 +285,6 @@
         provider: {
             name: Provider,
             value: `CURSE`
-        },
-        filename: {
-            name: Filename,
-            value: `rftools.jar`
         },
         side: {
             name: Side,

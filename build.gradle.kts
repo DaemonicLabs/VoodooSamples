@@ -3,6 +3,7 @@ plugins {
 }
 
 voodoo {
+    local = true
     addTask(name = "build", parameters = listOf("build"))
     addTask(name = "pack_sk", parameters = listOf("pack sk"))
     addTask(name = "pack_mmc", parameters = listOf("pack mmc"))

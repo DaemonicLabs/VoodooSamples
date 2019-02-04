@@ -24,7 +24,6 @@ root(CurseProvider) {
         }
 
         +Mod.rftools configure {
-            fileName = "rftools.jar"
         }
 
         withProvider(JenkinsProvider) {
@@ -37,5 +36,7 @@ root(CurseProvider) {
 
         +Mod.tails
         +Mod.wearableBackpacks
+
+        +Mod.mouseTweaks
     }
 }
