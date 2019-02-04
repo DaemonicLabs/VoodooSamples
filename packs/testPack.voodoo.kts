@@ -2,7 +2,7 @@ import voodoo.data.Side
 import voodoo.data.curse.FileType
 
 mcVersion = "1.12.2"
-version = "1.0.1"
+version = "1.1.1"
 icon = rootDir.resolve("icon.png")
 authors = listOf("NikkyAi")
 forge = Forge.recommended
