@@ -123,6 +123,36 @@
             value: `184`
         }
     },
+    foamfix-for-minecraft: {
+        id: {
+            name: ID,
+            value: `foamfix-for-minecraft`
+        },
+        version: {
+            name: Version,
+            value: "`FoamFix 0.10.3 (1.12.2)`"
+        },
+        provider: {
+            name: Provider,
+            value: `CURSE`
+        },
+        side: {
+            name: Side,
+            value: `BOTH`
+        },
+        optional: {
+            name: Optional,
+            value: `false`
+        },
+        curse_release_type: {
+            name: "Release Type",
+            value: `RELEASE`
+        },
+        curse_author: {
+            name: Author,
+            value: `asiekierka`
+        }
+    },
     jei: {
         id: {
             name: ID,
@@ -183,6 +213,36 @@
             value: `McJty`
         }
     },
+    mekanism: {
+        id: {
+            name: ID,
+            value: `mekanism`
+        },
+        version: {
+            name: Version,
+            value: `Mekanism-1.12.2-9.4.13.349.jar`
+        },
+        provider: {
+            name: Provider,
+            value: `CURSE`
+        },
+        side: {
+            name: Side,
+            value: `BOTH`
+        },
+        optional: {
+            name: Optional,
+            value: `false`
+        },
+        curse_release_type: {
+            name: "Release Type",
+            value: `RELEASE`
+        },
+        curse_author: {
+            name: Author,
+            value: `aidancbrady`
+        }
+    },
     rftools: {
         id: {
             name: ID,
@@ -195,6 +255,10 @@
         provider: {
             name: Provider,
             value: `CURSE`
+        },
+        filename: {
+            name: Filename,
+            value: `rftools.jar`
         },
         side: {
             name: Side,

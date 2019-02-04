@@ -1,5 +1,6 @@
 {
     provider: CURSE,
+    fileName: rftools.jar,
     dependencies: {
         REQUIRED: [
             mcjtylib

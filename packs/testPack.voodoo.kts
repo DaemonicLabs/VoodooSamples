@@ -14,7 +14,8 @@ root(CurseProvider) {
     list {
         +Mod.botania
 
-//        +Mod.foamfixForMinecraft
+        +Mod.foamfixForMinecraft
+        +Mod.mekanism
 
         group {
             side = Side.CLIENT
@@ -23,6 +24,7 @@ root(CurseProvider) {
         }
 
         +Mod.rftools configure {
+            fileName = "rftools.jar"
         }
 
         withProvider(JenkinsProvider) {
