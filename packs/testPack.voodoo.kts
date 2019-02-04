@@ -2,7 +2,7 @@ import voodoo.data.Side
 import voodoo.data.curse.FileType
 
 mcVersion = "1.12.2"
-version = "1.1"
+version = "1.0.1"
 icon = rootDir.resolve("icon.png")
 authors = listOf("NikkyAi")
 forge = Forge.recommended
@@ -14,7 +14,13 @@ root(CurseProvider) {
     list {
         +Mod.botania
 
-        +Mod.foamfixForMinecraft
+//        +Mod.foamfixForMinecraft
+
+        group {
+            side = Side.CLIENT
+        }.list {
+            +Mod.jei
+        }
 
         +Mod.rftools configure {
         }
