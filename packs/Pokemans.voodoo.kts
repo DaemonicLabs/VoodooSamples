@@ -1,3 +1,5 @@
+@file:GenerateForge(name = "Forge", mc = "1.10.2")
+
 import com.skcraft.launcher.model.modpack.Recommendation
 
 mcVersion = "1.10.2"

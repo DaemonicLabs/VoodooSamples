@@ -1,3 +1,5 @@
+@file:Include("TestInclude.kt")
+
 import voodoo.provider.Providers
 import voodoo.tome.TomeGenerator
 

@@ -5,6 +5,7 @@ plugins {
 voodoo {
     local = true
     addTask(name = "build", parameters = listOf("build"))
+    addTask(name = "import_debug", parameters = listOf("import_debug"))
     addTask(name = "pack_sk", parameters = listOf("pack sk"))
     addTask(name = "pack_mmc", parameters = listOf("pack mmc"))
     addTask(name = "pack_mmc-static", parameters = listOf("pack mmc-static"))
