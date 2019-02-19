@@ -1,3 +1,6 @@
+@file:GenerateMods(name = "Mod", mc = "1.12.2")
+@file:GenerateMods(name = "Mod", mc = "1.12.1")
+@file:GenerateMods(name = "Mod", mc = "1.12")
 @file:GenerateForge(name = "Forge", mc = "1.10.2")
 
 import com.skcraft.launcher.model.modpack.Recommendation

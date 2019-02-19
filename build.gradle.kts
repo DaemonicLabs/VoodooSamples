@@ -1,3 +1,5 @@
+import voodoo.LocalVoodooJarTask
+
 plugins {
     id("voodoo") version "0.4.6-dev"
 }

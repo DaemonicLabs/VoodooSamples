@@ -4,7 +4,7 @@
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12.2")
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12.1")
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12")
-@file:GenerateForge(name = "Forge", mc = "1.12.2")
+@file:GenerateForge(name = "Forge_12_2", mc = "1.12.2")
 @file:Include("OptionalMods.kt")
 
 import voodoo.data.Side
@@ -14,7 +14,7 @@ mcVersion = "1.12.2"
 version = "1.1.2"
 icon = rootDir.resolve("icon.png")
 authors = listOf("NikkyAi")
-forge = Forge.recommended
+forge = Forge_12_2.mc1_12_2_recommended
 
 root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA)

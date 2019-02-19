@@ -292,7 +292,7 @@ added `keyboard-wizard`
 Property | old value | new value
 ---|---|---
 ID |  | `keyboard-wizard`
-Version |  | `keywizard-1.12.2-1.5.3.jar`
+Version |  | `keywizard-1.12.2-1.5.4.jar`
 Provider |  | `CURSE`
 Side |  | `BOTH`
 Description |  | `Visual keybind manager.`
@@ -337,7 +337,7 @@ added `mouse-tweaks`
 Property | old value | new value
 ---|---|---
 ID |  | `mouse-tweaks`
-Version |  | `[1.12.2] Mouse Tweaks 2.9`
+Version |  | `[1.12.2] Mouse Tweaks 2.10`
 Provider |  | `CURSE`
 Side |  | `BOTH`
 Optional |  | `false`
@@ -426,6 +426,7 @@ changed rftools
 
 Property | old value | new value
 ---|---|---
+Version | `RFTools - 1.12-7.60` | `RFTools - 1.12-7.61`
 Filename | `rftools.jar` | 
 
 

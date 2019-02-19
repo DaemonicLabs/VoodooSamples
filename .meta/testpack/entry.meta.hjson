@@ -470,7 +470,7 @@
         },
         version: {
             name: Version,
-            value: `keywizard-1.12.2-1.5.3.jar`
+            value: `keywizard-1.12.2-1.5.4.jar`
         },
         provider: {
             name: Provider,
@@ -632,7 +632,7 @@
         },
         version: {
             name: Version,
-            value: "`[1.12.2] Mouse Tweaks 2.9`"
+            value: "`[1.12.2] Mouse Tweaks 2.10`"
         },
         provider: {
             name: Provider,
@@ -692,7 +692,7 @@
         },
         version: {
             name: Version,
-            value: "`RFTools - 1.12-7.60`"
+            value: "`RFTools - 1.12-7.61`"
         },
         provider: {
             name: Provider,
