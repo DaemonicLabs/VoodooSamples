@@ -2,11 +2,12 @@
 
 import voodoo.provider.Providers
 import voodoo.tome.TomeGenerator
+import java.io.File
 
 logger.info("initializing credits")
 
 generator = object : TomeGenerator() {
-    override suspend fun generateHtml(modPack: ModPack, lockPack: LockPack): String {
+    override suspend fun generateHtml(modPack: ModPack, lockPack: LockPack, targetFolder: File): String {
         logger.info("writing credits for pack ${modPack.id}")
 
         return buildString {

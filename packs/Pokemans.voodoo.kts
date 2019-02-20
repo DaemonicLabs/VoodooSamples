@@ -1,7 +1,7 @@
 @file:GenerateMods(name = "Mod", mc = "1.12.2")
 @file:GenerateMods(name = "Mod", mc = "1.12.1")
 @file:GenerateMods(name = "Mod", mc = "1.12")
-@file:GenerateForge(name = "Forge", mc = "1.10.2")
+@file:GenerateForge(name = "Forge_10_2", mc = "1.10.2")
 
 import com.skcraft.launcher.model.modpack.Recommendation
 
@@ -10,7 +10,7 @@ title = "Pokemans Reloaded"
 version = "1.0"
 icon = rootDir.resolve("icon.png")
 authors = listOf("capitalthree", "NikkyAi")
-forge = Forge.mc1_10_2.build2422
+forge = Forge_10_2.mc1_10_2_recommended
 root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
     list {
@@ -35,7 +35,6 @@ root(CurseProvider) {
         +Mod.jei
         +Mod.lingeringLoot
         +Mod.minecolonies
-        +Mod.minecraftFlightSimulator
         +Mod.modtweaker
         +Mod.multiMine
         +Mod.openmodularturrets
