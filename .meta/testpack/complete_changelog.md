@@ -422,12 +422,58 @@ Author |  | `xaero96`
 
 ### Updated Entries
 
+changed botania
+
+Property | old value | new value
+---|---|---
+Version | `Botania r1.10-359.jar` | `Botania r1.10-360.jar`
+
+
+
+changed jei
+
+Property | old value | new value
+---|---|---
+Version | `jei_1.12.2-4.14.4.264.jar` | `jei_1.12.2-4.14.4.267.jar`
+
+
+
 changed rftools
 
 Property | old value | new value
 ---|---|---
 Version | `RFTools - 1.12-7.60` | `RFTools - 1.12-7.61`
 Filename | `rftools.jar` | 
+
+
+
+### Removed Entries
+
+removed `btfu`
+
+Property | old value | new value
+---|---|---
+ID | `btfu` | 
+Version | `BTFU-1.11.2-2.5.jar` | 
+Provider | `JENKINS` | 
+Side | `SERVER` | 
+Optional | `false` | 
+Job | `elytra/BTFU/multi-version` | 
+Build | `6` | 
+
+
+
+removed `matterlink`
+
+Property | old value | new value
+---|---|---
+ID | `matterlink` | 
+Version | `MatterLink-1.12.2-1.6.4-184.jar` | 
+Provider | `JENKINS` | 
+Side | `SERVER` | 
+Optional | `false` | 
+Job | `elytra/MatterLink/master` | 
+Build | `184` | 
 
 
 

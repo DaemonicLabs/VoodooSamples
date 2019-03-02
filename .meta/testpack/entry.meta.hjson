@@ -74,7 +74,7 @@
         },
         version: {
             name: Version,
-            value: "`Botania r1.10-359.jar`"
+            value: "`Botania r1.10-360.jar`"
         },
         provider: {
             name: Provider,
@@ -205,66 +205,6 @@
         curse_author: {
             name: Author,
             value: `OreCruncher`
-        }
-    },
-    btfu: {
-        id: {
-            name: ID,
-            value: `btfu`
-        },
-        version: {
-            name: Version,
-            value: `BTFU-1.11.2-2.5.jar`
-        },
-        provider: {
-            name: Provider,
-            value: `JENKINS`
-        },
-        side: {
-            name: Side,
-            value: `SERVER`
-        },
-        optional: {
-            name: Optional,
-            value: `false`
-        },
-        jenkins_job: {
-            name: Job,
-            value: `elytra/BTFU/multi-version`
-        },
-        jenkins_build: {
-            name: Build,
-            value: `6`
-        }
-    },
-    matterlink: {
-        id: {
-            name: ID,
-            value: `matterlink`
-        },
-        version: {
-            name: Version,
-            value: `MatterLink-1.12.2-1.6.4-184.jar`
-        },
-        provider: {
-            name: Provider,
-            value: `JENKINS`
-        },
-        side: {
-            name: Side,
-            value: `SERVER`
-        },
-        optional: {
-            name: Optional,
-            value: `false`
-        },
-        jenkins_job: {
-            name: Job,
-            value: `elytra/MatterLink/master`
-        },
-        jenkins_build: {
-            name: Build,
-            value: `184`
         }
     },
     fancy-block-particles: {
@@ -440,7 +380,7 @@
         },
         version: {
             name: Version,
-            value: `jei_1.12.2-4.14.4.264.jar`
+            value: `jei_1.12.2-4.14.4.267.jar`
         },
         provider: {
             name: Provider,

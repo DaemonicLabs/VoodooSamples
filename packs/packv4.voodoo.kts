@@ -10,14 +10,19 @@ authors = listOf("therealfarfetchd")
 version = "1.0.0"
 forge = Forge.mc1_12_2_latest
 icon = rootDir.resolve("icon.png")
-userFiles = UserFiles(
-    include = listOf(
-        "options.txt",
-        "quark.cfg",
-        "foamfix.cfg"
-    ),
-    exclude = listOf("")
-)
+pack {
+    skcraft {
+        userFiles = UserFiles(
+            include = listOf(
+                "options.txt",
+                "quark.cfg",
+                "foamfix.cfg"
+            ),
+            exclude = listOf("")
+        )
+    }
+}
+
 root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
     validMcVersions = setOf("1.12.2", "1.12.1", "1.12")

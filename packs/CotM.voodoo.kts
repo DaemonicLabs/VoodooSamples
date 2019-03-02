@@ -4,14 +4,19 @@ authors = listOf("AnsuzThuriaz", "Falkreon", "NikkyAi")
 version = "2.1.9" //TODO: generate sealed class with mc version -> see forge versions
 forge = Forge.mc1_12_2.build2759
 icon = rootDir.resolve("icon.png")
-userFiles = UserFiles(
-    include = listOf(
-        "options.txt",
-        "quark.cfg",
-        "foamfix.cfg"
-    ),
-    exclude = listOf("")
-)
+pack {
+    skcraft {
+        userFiles = UserFiles(
+            include = listOf(
+                "options.txt",
+                "quark.cfg",
+                "foamfix.cfg"
+            ),
+            exclude = listOf("")
+        )
+    }
+}
+
 root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA, FileType.ALPHA)
     validMcVersions = setOf("1.12.1", "1.12")

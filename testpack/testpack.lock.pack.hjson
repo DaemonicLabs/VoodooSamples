@@ -2,7 +2,6 @@
     id: testpack,
     mcVersion: 1.12.2,
     version: 1.1.2,
-    icon: "D:\\dev\\Voodoo\\samples\\icon.png",
     authors: [
         NikkyAi
     ],

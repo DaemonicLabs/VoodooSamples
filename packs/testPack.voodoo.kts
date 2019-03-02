@@ -4,7 +4,7 @@
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12.2")
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12.1")
 @file:GenerateTexturePacks(name = "TexturePack", mc = "1.12")
-@file:GenerateForge(name = "Forge_12_2", mc = "1.12.2")
+@file:GenerateForge(name = "Forge_12", mc = "1.12.2")
 @file:Include("OptionalMods.kt")
 
 import voodoo.data.Side
@@ -14,7 +14,11 @@ mcVersion = "1.12.2"
 version = "1.1.2"
 icon = rootDir.resolve("icon.png")
 authors = listOf("NikkyAi")
-forge = Forge_12_2.mc1_12_2_recommended
+forge = Forge_12.mc1_12_2_recommended
+
+pack {
+
+}
 
 root(CurseProvider) {
     releaseTypes = setOf(FileType.RELEASE, FileType.BETA)
@@ -38,13 +42,13 @@ root(CurseProvider) {
         }
 
 
-        withProvider(JenkinsProvider) {
-            jenkinsUrl = "https://ci.elytradev.com"
-            side = Side.SERVER
-        }.list {
-            +"matterlink" job "elytra/MatterLink/master"
-            +"btfu" job "elytra/BTFU/multi-version"
-        }
+//        withProvider(JenkinsProvider) {
+//            jenkinsUrl = "https://ci.elytradev.com"
+//            side = Side.SERVER
+//        }.list {
+//            +"matterlink" job "elytra/MatterLink/master"
+//            +"btfu" job "elytra/BTFU/multi-version"
+//        }
 
         +Mod.tails
         +Mod.wearableBackpacks
